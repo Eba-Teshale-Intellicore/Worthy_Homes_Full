@@ -3,6 +3,7 @@ import styles from "@/src/scss/heroabout.module.scss";
 import Heading from "@/components/Heading";
 import Button from "@/components/Button";
 import Image from "next/image";
+import { MoveUpRight } from "lucide-react";
 export default function HeroAbout() {
   return (
     <>
@@ -24,7 +25,7 @@ export default function HeroAbout() {
                   lasting relationships, and earned a reputation for integrity
                   and reliability.
                 </p>
-                <Button text="More About Us" />
+                <Button text="More About Us" icon={<MoveUpRight size={18} />} />
               </div>
               <div className={`${styles.thiblock} ${styles.block3}`}>
                 <Image
