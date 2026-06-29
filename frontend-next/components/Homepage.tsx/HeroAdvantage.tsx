@@ -35,32 +35,34 @@ export default function HeroAdvantage() {
   return (
     <>
       <div className={styles.container}>
-        <div className={styles.heroadva}>
-          <div className={styles.grid}>
-            <Heading text="Our advantages" />
-            <div>
-              <p>
-                <Paragraph
-                  text="We offer an individual approach to each client."
-                  size="lg"
-                />
-              </p>
-              <hr />
-            </div>
-            <div className={styles.sections}>
-              {elements.map((element, index) => {
-                return (
-                  <div
-                    key={index}
-                    className={`${styles.secbox} ${
-                      element.classname ? styles[element.classname] : ""
-                    }`}
-                  >
-                    <Heading text={element.heading} size="md" />
-                    <Paragraph text={element.para} size="sm" />
-                  </div>
-                );
-              })}
+        <div className={styles.seccontainer}>
+          <div className={styles.heroadva}>
+            <div className={styles.grid}>
+              <Heading text="Our advantages" />
+              <div>
+                <p>
+                  <Paragraph
+                    text="We offer an individual approach to each client."
+                    size="lg"
+                  />
+                </p>
+                <hr />
+              </div>
+              <div className={styles.sections}>
+                {elements.map((element, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className={`${styles.secbox} ${
+                        element.classname ? styles[element.classname] : ""
+                      }`}
+                    >
+                      <Heading text={element.heading} size="md" />
+                      <Paragraph text={element.para} size="sm" />
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>

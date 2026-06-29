@@ -1,3 +1,11 @@
+.seccontainer {
+  background-image: url("/hero1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  min-height: 160vh;
+}
 .heroadva {
   align-items: center;
   padding: 2rem;
@@ -28,6 +36,11 @@
 .secbox {
   padding: 1rem 2rem;
   justify-content: center;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  }
 }
 .background {
   background: #d5ffca;

@@ -2,8 +2,10 @@ import React from "react";
 
 import Hero from "./Hero";
 import HeroAbout from "./HeroAbout";
-
 import HeroAdvantage from "./HeroAdvantage";
+import HeroServices from "./HeroServices";
+import HeroProperities from "./HeroProperities";
+import HeroPartners from "./HeroPartners";
 
 export default function Homepage() {
   return (
@@ -11,6 +13,9 @@ export default function Homepage() {
       <Hero />
       <HeroAbout />
       <HeroAdvantage />
+      <HeroServices />
+      <HeroProperities />
+      <HeroPartners />
     </>
   );
 }
