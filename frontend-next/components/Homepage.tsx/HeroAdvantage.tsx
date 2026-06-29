@@ -52,7 +52,9 @@ export default function HeroAdvantage() {
                 return (
                   <div
                     key={index}
-                    className={`${styles.secbox} ${styles[element.classname]}`}
+                    className={`${styles.secbox} ${
+                      element.classname ? styles[element.classname] : ""
+                    }`}
                   >
                     <Heading text={element.heading} size="md" />
                     <Paragraph text={element.para} size="sm" />
