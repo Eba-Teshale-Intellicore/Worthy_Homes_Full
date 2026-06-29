@@ -3,6 +3,7 @@ import styles from "@/src/scss/hero.module.scss";
 import Button from "@/components/Button";
 import { MoveUpRight } from "lucide-react";
 import Image from "next/image";
+import Paragraph from "../Paragraph";
 
 export default function Hero() {
   return (
@@ -17,10 +18,14 @@ export default function Hero() {
               className={`${styles.secblock} ${styles.block2} ${styles.herocon}`}
             >
               <p>
-                We are dedicated to helping you find the perfect property that
+                {" "}
+                <Paragraph
+                  text="We are dedicated to helping you find the perfect property that
                 meets your needs and lifestyles. With a passion for real estate
                 and a commitment to exceleence, we connect buyers sellerrs, and
-                investories with the best oppurtunities in the market.
+                investories with the best oppurtunities in the market."
+                  size="sm"
+                />
               </p>
               <Button text="View Properties" icon={<MoveUpRight size={18} />} />
             </div>

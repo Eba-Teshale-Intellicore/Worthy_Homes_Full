@@ -1,0 +1,34 @@
+.heroadva {
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(to top, white 10%, #d5ffca 90%);
+  position: relative;
+  min-height: 100vh;
+
+  p {
+    margin: 2rem 20rem 2rem 10rem;
+  }
+}
+
+.sections {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  margin: 2rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.secbox {
+  padding: 1rem 2rem;
+  justify-content: center;
+}
+.background {
+  background: #d5ffca;
+}

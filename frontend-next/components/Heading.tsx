@@ -1,15 +1,10 @@
-import styles from "@/src/scss/button.module.scss";
-import React from "react";
+import styles from "@/src/scss/heading.module.scss";
 
 type HeadingProps = {
   text: string;
-  // variant?: "primary" | "secondary";
+  size?: "sm" | "md" | "lg" | "xl";
 };
 
-export default function Heading(props: HeadingProps) {
-  return (
-    <>
-      <h1 className={`${styles.button}`}>{props.text}</h1>
-    </>
-  );
+export default function Heading({ text, size = "lg" }: HeadingProps) {
+  return <h1 className={`${styles.heading} ${styles[size]}`}>{text}</h1>;
 }

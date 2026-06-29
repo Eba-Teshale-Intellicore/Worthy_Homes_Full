@@ -1,0 +1,27 @@
+:root {
+  --text-sm: clamp(0.9rem, 2vw, 1.2rem);
+  --text-md: clamp(1.1rem, 3vw, 1.7rem);
+  --text-lg: clamp(2rem, 3vw, 3rem);
+  --text-xl: clamp(3rem, 6vw, 7rem);
+}
+
+.parag {
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #111;
+
+  font-size: var(--text-md);
+}
+
+.sm {
+  font-size: var(--text-sm);
+}
+
+.lg {
+  font-size: var(--text-lg);
+}
+
+.xl {
+  font-size: var(--text-xl);
+}

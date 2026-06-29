@@ -1,10 +1,10 @@
-import HeroPage from "@/components/Homepage.tsx/Homepage";
+import Homepage from "@/components/Homepage.tsx/Homepage";
 
 export default function Home() {
   return (
     <div>
       <main>
-        <HeroPage />
+        <Homepage />
       </main>
     </div>
   );
