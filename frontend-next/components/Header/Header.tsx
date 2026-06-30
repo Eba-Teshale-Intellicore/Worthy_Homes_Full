@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Button from "@/components/Button";
 import { useRouter } from "next/navigation";
 import { MoveUpRight } from "lucide-react";
@@ -9,9 +9,26 @@ import Image from "next/image";
 import styles from "@/src/scss/header.module.scss";
 export default function Header() {
   const router = useRouter();
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <div className={styles.container}>
+      <div className={`${styles.container} ${scrolled ? styles.scrolled : ""}`}>
         <div className={styles.header}>
           <div className="logo">
             <Link href="/" className="logo">
