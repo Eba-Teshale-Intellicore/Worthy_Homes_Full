@@ -9,6 +9,7 @@
   position: relative;
   border-bottom: solid 1px;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 .hccontent {
   padding: 2rem;
@@ -17,13 +18,22 @@
     margin: 2rem 20rem 2rem 10rem;
   }
 }
+.slider {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
 .secbox {
+  position: absolute;
+  inset: 0;
+
   display: flex;
   align-items: center;
+  gap: 2rem;
   justify-content: center;
   gap: 1rem;
   margin: 3rem 5rem;
-  height: 100%;
   transition: opacity 0.3s ease-out;
 
   &:hover {
@@ -48,6 +58,7 @@
     flex-direction: column;
     border: solid 10px #d5ffca;
     padding: 2rem 4rem;
+    min-height: 400px;
     span {
       opacity: 0.5;
       padding-bottom: 2rem;

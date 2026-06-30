@@ -59,36 +59,38 @@ export default function HeroClient() {
               <hr />
             </div>
 
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={index}
-                className={styles.secbox}
-                initial={{ x: 300, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                exit={{ x: -300, opacity: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                <div className={styles.image}>
-                  <Image
-                    src={review.image}
-                    alt={review.name}
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
-                </div>
+            <div className={styles.slider}>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={index}
+                  className={styles.secbox}
+                  initial={{ x: 300, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  exit={{ x: -300, opacity: 0 }}
+                  transition={{ duration: 0.8 }}
+                >
+                  <div className={styles.image}>
+                    <Image
+                      src={review.image}
+                      alt={review.name}
+                      fill
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
 
-                <div className={styles.review}>
-                  <span className={styles.quote}>
-                    <Quote size={80} />
-                  </span>
+                  <div className={styles.review}>
+                    <span className={styles.quote}>
+                      <Quote size={80} />
+                    </span>
 
-                  <Paragraph text={review.review} size="sm" />
+                    <Paragraph text={review.review} size="sm" />
 
-                  <Heading text={review.name} size="sm" />
-                  <Heading text={review.city} size="sm" />
-                </div>
-              </motion.div>
-            </AnimatePresence>
+                    <Heading text={review.name} size="sm" />
+                    <Heading text={review.city} size="sm" />
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
           </div>
         </div>
       </div>

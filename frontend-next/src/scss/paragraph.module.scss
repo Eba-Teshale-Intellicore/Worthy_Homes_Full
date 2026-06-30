@@ -3,6 +3,9 @@
   --text-md: clamp(1.1rem, 3vw, 1.7rem);
   --text-lg: clamp(2rem, 3vw, 3rem);
   --text-xl: clamp(3rem, 6vw, 7rem);
+  --color-white: #d9d9d9;
+  --color-black: black;
+  --color-green: green;
 }
 
 .parag {
@@ -24,4 +27,13 @@
 
 .xl {
   font-size: var(--text-xl);
+}
+.white {
+  color: var(--color-white);
+}
+.black {
+  color: var(--color-black);
+}
+.green {
+  color: var(--color-green);
 }
