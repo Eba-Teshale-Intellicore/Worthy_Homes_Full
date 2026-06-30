@@ -6,6 +6,7 @@ import HeroAdvantage from "./HeroAdvantage";
 import HeroServices from "./HeroServices";
 import HeroProperities from "./HeroProperities";
 import HeroPartners from "./HeroPartners";
+import HeroClient from "./HeroClient"
 
 export default function Homepage() {
   return (
@@ -16,6 +17,7 @@ export default function Homepage() {
       <HeroServices />
       <HeroProperities />
       <HeroPartners />
+      <HeroClient />
     </>
   );
 }
