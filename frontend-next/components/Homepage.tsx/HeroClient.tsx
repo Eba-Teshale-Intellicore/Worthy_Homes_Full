@@ -19,13 +19,13 @@ export default function HeroClient() {
                 <Image alt="Sec" src={pic1} fill />
               </div>
               <div className={styles.review}>
+                <Quote size={30} />
                 <p>
                   <Paragraph
                     text="They didn't just show me listings—they helped me understand the market, guided me through financing options, and negotiated the best deal on my behalf. Their patience, professionalism, and attention to detail made all the difference. I am beyond grateful for their help and would choose them again in a heartbeat!"
                     size="sm"
                   />
                 </p>
-                <Quote size={30} />
                 <Heading text="Kebede Abdisa" size="md" />
                 <Heading text="Addis Ababa, Ethiopia" size="sm" />
               </div>
