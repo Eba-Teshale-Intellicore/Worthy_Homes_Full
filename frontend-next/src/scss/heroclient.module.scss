@@ -13,31 +13,47 @@
 .hccontent {
   padding: 2rem;
 
-  .secbox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    border: solid 1px;
-    padding: 3rem 5rem;
-    height: 100%;
+  p {
+    margin: 2rem 20rem 2rem 10rem;
+  }
+}
+.secbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 3rem 5rem;
+  height: 100%;
+  transition: opacity 0.3s ease-out;
 
-    .image {
-      position: relative;
-      width: 60vw;
-      height: 60vh;
-      padding: 2rem;
-      border: solid 1px;
+  &:hover {
+    opacity: 1;
+    transform: translateY(-12px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  }
 
-      img {
-        object-fit: cover;
-      }
+  .image {
+    position: relative;
+    min-width: 20rem;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 20px;
+
+    img {
+      object-fit: cover;
     }
-    .review {
-      display: flex;
-      flex-direction: column;
-      border: solid 1px;
-      padding: 4rem;
+  }
+  .review {
+    display: flex;
+    flex-direction: column;
+    border: solid 10px #d5ffca;
+    padding: 2rem 4rem;
+    span {
+      opacity: 0.5;
+      padding-bottom: 2rem;
+    }
+    p {
+      margin-left: 3rem;
     }
   }
 }
