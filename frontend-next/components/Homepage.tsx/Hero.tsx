@@ -3,8 +3,8 @@ import styles from "@/src/scss/hero.module.scss";
 import Button from "@/components/Button";
 import { MoveUpRight } from "lucide-react";
 import Image from "next/image";
-import Paragraph from "../Paragraph";
-import Heading from "../Heading";
+import Paragraph from "@/components/Paragraph";
+import Heading from "@/components/Heading";
 
 export default function Hero() {
   return (
@@ -14,7 +14,7 @@ export default function Hero() {
           <div className={styles.grid}>
             <div className={`${styles.firblock} ${styles.block1}`}>
               <h1>
-                <Heading text="LUXURY LIVING" />
+                <Heading text="LUXURY LIVING" size="xl" />
               </h1>
             </div>
             <div
