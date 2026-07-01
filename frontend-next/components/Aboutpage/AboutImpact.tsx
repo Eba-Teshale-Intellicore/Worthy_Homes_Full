@@ -46,7 +46,7 @@ export default function AboutImpact() {
                 <div className={styles.stat2}>
                   <p>More than 60% of buyers prefer suburban homes</p>
                   <div className={`${styles.imagecontaine}`}>
-                    {/* <Image src={Pic1} alt="Luxury home" fill /> */}
+                    <Image src={Pic1} alt="Luxury home" fill />
                   </div>
                 </div>
               </div>

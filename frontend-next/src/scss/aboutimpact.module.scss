@@ -74,11 +74,6 @@
     font-size: 5rem;
     padding-right: 4rem;
   }
-}
-.thiblock {
-  border: solid 1px;
-  width: 33%;
-  // height: 90%;
   .imagecontaine {
     position: relative;
     width: 10rem;
@@ -90,4 +85,9 @@
       border-radius: 3rem;
     }
   }
+}
+.thiblock {
+  border: solid 1px;
+  width: 33%;
+  height: 90%;
 }
