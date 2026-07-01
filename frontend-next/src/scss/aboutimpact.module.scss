@@ -1,0 +1,93 @@
+.aboutImpact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(to top, white 10%, #d5ffca 90%);
+  position: relative;
+  border-bottom: solid 1px;
+  min-height: 100vh;
+}
+.aicontent {
+  height: 100vh;
+}
+.grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  height: 100%;
+
+  @media (min-width: 40rem) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0;
+    height: 100%;
+  }
+}
+
+/* Grid Areas */
+.block1 {
+  grid-area: fir;
+}
+.block2 {
+  grid-area: sec;
+}
+.block3 {
+  grid-area: thi;
+}
+/* ===========================
+   First Block
+=========================== */
+.firblock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 4rem 0;
+  width: 33%;
+  height: 100%;
+  h1 {
+    margin-right: 3rem;
+    background-color: white;
+  }
+
+  p {
+    padding: 2rem 1rem;
+  }
+}
+
+.secblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  border: solid 1px;
+  width: 33%;
+  height: 90%;
+  h1 {
+    font-size: 5rem;
+    padding-right: 4rem;
+  }
+}
+.thiblock {
+  border: solid 1px;
+  width: 33%;
+  // height: 90%;
+  .imagecontaine {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+      border-radius: 3rem;
+    }
+  }
+}

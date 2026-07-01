@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import styles from "@/src/scss/aboutlegacy.module.scss";
 import Paragraph from "../Paragraph";
