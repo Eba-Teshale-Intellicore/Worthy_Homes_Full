@@ -1,96 +1,63 @@
-"use client";
-import React, { useState } from "react";
-import styles from "@/src/scss/aboutagent.module.scss";
+import React from "react";
+import pic1 from "@/public/agent1.svg";
+import pic2 from "@/public/agent2.svg";
+import pic3 from "@/public/agent3.svg";
+import pic4 from "@/public/agent4.svg";
+import Image from "next/image";
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
-import Image from "next/image";
-import Pic1 from "@/public/aboutask.svg";
-import { AnimatePresence, motion } from "framer-motion";
-import { Plus } from "lucide-react";
+import Button from "@/components/Button";
+import styles from "@/src/scss/aboutagent.module.scss";
+import { MoveUpRight } from "lucide-react";
 
-const faqs = [
-  {
-    question: "Frequently Asked Questions",
-    answer:
-      "The gap between what gets built and what's actually needed—for teachers, nurses, service workers, families—keeps widening across cities everywhere.",
-  },
-  {
-    question: "Why Worthy Homes?",
-    answer:
-      "Worthy Homes was founded to close that gap: a private development firm operating with speed, discipline, and accountability.",
-  },
-  {
-    question: "Frequently Asked Questions",
-    answer:
-      "The gap between what gets built and what's actually needed—for teachers, nurses, service workers, families—keeps widening across cities everywhere.",
-  },
-  {
-    question: "Frequently Asked Questions",
-    answer:
-      "The gap between what gets built and what's actually needed—for teachers, nurses, service workers, families—keeps widening across cities everywhere.",
-  },
-  {
-    question: "Frequently Asked Questions",
-    answer:
-      "The gap between what gets built and what's actually needed—for teachers, nurses, service workers, families—keeps widening across cities everywhere.",
-  },
+const elements = [
+  { src: pic1, heading: "Israel Bedesa", paragraph: "Founder & CEO" },
+  { src: pic2, heading: "Meseret Beqele", paragraph: "Real Estate Agent" },
+  { src: pic3, heading: "Bereket Abera", paragraph: "Consultant" },
+  { src: pic4, heading: "Fenet Belay", paragraph: "Sales Manager" },
 ];
 
-export default function AboutAgent() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+export default function HeroProperities() {
   return (
-    <>
-      <div className={styles.container}>
-        <div className={styles.seccontainer}>
-          <div className={styles.aboutagent}>
-            <Heading text="Frequently Asked Questions" />
-            <div className={`${styles.thiblock} ${styles.block3}`}>
-              <div className={styles.secbox}>
-                <div className={styles.textcontainer}>
-                  {faqs.map((faq, index) => (
-                    <div key={index} className={styles.faq}>
-                      <div
-                        className={styles.question}
-                        onClick={() =>
-                          setOpenIndex(openIndex === index ? null : index)
-                        }
-                      >
-                        <Heading text={faq.question} size="sm" />
-                        <Plus
-                          size={24}
-                          style={{
-                            transform:
-                              openIndex === index
-                                ? "rotate(45deg)"
-                                : "rotate(0deg)",
-                            transition: "0.3s",
-                          }}
-                        />
-                      </div>
-                      <AnimatePresence>
-                        {openIndex === index && (
-                          <motion.div
-                            className={styles.answer}
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: "auto", opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.3 }}
-                          >
-                            <Paragraph text={faq.answer} size="sm" />
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
+    <div className={styles.container}>
+      <div className={styles.heroproperties}>
+        <div className={styles.hpcontent}>
+          <Heading text="Real estate agents" />
+
+          <div>
+            <div className={styles.section}>
+              {elements.map((element, index) => {
+                return (
+                  <div key={index} className={styles.secbox}>
+                    <div className={styles.image}>
+                      <Image
+                        src={element.src}
+                        alt="Luxury home"
+                        fill
+                        style={{ objectFit: "cover" }}
+                      />
                     </div>
-                  ))}
-                </div>
-                <div className={`${styles.imagecontainer} ${styles.blockimg}`}>
-                  <Image src={Pic1} alt="Luxury home" fill />
-                </div>
-              </div>
+
+                    <div className={styles.detail}>
+                      <Heading text={element.heading} size="sm" />
+                      <div className={styles.cont}>
+                        <Paragraph text={element.paragraph} size="sm" />
+                        {/* <Button text="" icon={<MoveUpRight size={18} />} /> */}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
+          </div>
+          <div className={styles.lastbtn}>
+            <Button
+              text="View All Properties"
+              icon={<MoveUpRight size={18} />}
+            />
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
