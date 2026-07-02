@@ -1,0 +1,18 @@
+.aboutagent {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  padding-bottom: 5rem;
+  background: linear-gradient(to top, white 10%, #d5ffca 90%);
+  position: relative;
+  border-bottom: solid 1px;
+  min-height: 100vh;
+}
+.aacontent {
+  align-items: center;
+  padding: 2rem;
+
+  p {
+    margin: 2rem 20rem 2rem 10rem;
+  }
+}

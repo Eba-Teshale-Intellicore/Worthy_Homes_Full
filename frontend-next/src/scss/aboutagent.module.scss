@@ -1,4 +1,4 @@
-.heroproperties {
+.aboutagent {
   display: flex;
   flex-direction: column;
   padding: 2rem;
@@ -7,6 +7,14 @@
   position: relative;
   border-bottom: solid 1px;
   min-height: 100vh;
+}
+.aacontent {
+  align-items: center;
+  padding: 2rem;
+
+  p {
+    margin: 2rem 20rem 2rem 10rem;
+  }
 }
 .section {
   display: grid;
@@ -39,7 +47,7 @@
   .image {
     position: relative;
     width: 100%;
-    aspect-ratio: 12 / 10;
+    aspect-ratio: 8 / 10;
     overflow: hidden;
   }
 

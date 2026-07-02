@@ -17,13 +17,18 @@ const elements = [
   { src: pic4, heading: "Fenet Belay", paragraph: "Sales Manager" },
 ];
 
-export default function HeroProperities() {
+export default function AboutAgent() {
   return (
     <div className={styles.container}>
-      <div className={styles.heroproperties}>
-        <div className={styles.hpcontent}>
+      <div className={styles.aboutagent}>
+        <div className={styles.aacontent}>
           <Heading text="Real estate agents" />
-
+          <div>
+            <p>
+              <Paragraph text="Our team consists of professionals" size="lg" />
+            </p>
+            <hr />
+          </div>
           <div>
             <div className={styles.section}>
               {elements.map((element, index) => {
@@ -51,10 +56,7 @@ export default function HeroProperities() {
             </div>
           </div>
           <div className={styles.lastbtn}>
-            <Button
-              text="View All Properties"
-              icon={<MoveUpRight size={18} />}
-            />
+            <Button text="More our agents" icon={<MoveUpRight size={18} />} />
           </div>
         </div>
       </div>

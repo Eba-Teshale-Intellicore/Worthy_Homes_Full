@@ -5,6 +5,7 @@ import AboutService from "@/components/Aboutpage/AboutService";
 import AboutImpact from "@/components/Aboutpage/AboutImpact";
 import AboutAgent from "@/components/Aboutpage/AboutAgent";
 import AboutAsk from "@/components/Aboutpage/AboutAsk";
+import AboutContact from "@/components/Aboutpage/AboutContact";
 
 export default function AboutPage() {
   return (
@@ -15,6 +16,7 @@ export default function AboutPage() {
       <AboutImpact />
       <AboutAgent />
       <AboutAsk />
+      <AboutContact />
     </>
   );
 }
