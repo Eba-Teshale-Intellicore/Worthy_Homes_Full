@@ -6,6 +6,7 @@ import AboutImpact from "@/components/Aboutpage/AboutImpact";
 import AboutAgent from "@/components/Aboutpage/AboutAgent";
 import AboutAsk from "@/components/Aboutpage/AboutAsk";
 import AboutContact from "@/components/Aboutpage/AboutContact";
+import AboutArticle from "@/components/Aboutpage/AboutArticle";
 
 export default function AboutPage() {
   return (
@@ -17,6 +18,7 @@ export default function AboutPage() {
       <AboutAgent />
       <AboutAsk />
       <AboutContact />
+      <AboutArticle />
     </>
   );
 }
