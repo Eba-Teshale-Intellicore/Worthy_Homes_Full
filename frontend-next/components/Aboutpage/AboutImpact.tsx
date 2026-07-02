@@ -37,14 +37,18 @@ export default function AboutImpact() {
               </div>
 
               <div className={`${styles.secblock} ${styles.block2}`}>
-                <div className={styles.stat1}>
-                  <p>More than 60% of buyers prefer suburban homes</p>
+                <div className={`${styles.stat} ${styles.stat1}`}>
+                  <p>
+                    <Paragraph text="Property Transactions" />
+                  </p>
                   <h1>
                     <Counter end={70} suffix="%" />
                   </h1>
                 </div>
-                <div className={styles.stat2}>
-                  <p>More than 60% of buyers prefer suburban homes</p>
+                <div className={`${styles.stat} ${styles.stat2}`}>
+                  <p>
+                    <Paragraph text="Operating in  Addis Ababa" />
+                  </p>
                   <div className={`${styles.imagecontaine}`}>
                     <Image src={Pic1} alt="Luxury home" fill />
                   </div>
@@ -52,7 +56,22 @@ export default function AboutImpact() {
               </div>
 
               <div className={`${styles.thiblock} ${styles.block3}`}>
-                <h1>Eba</h1>
+                <div className={`${styles.stat} ${styles.stat1}`}>
+                  <p>
+                    <Paragraph text="Properties Sold" />
+                  </p>
+                  <h1>
+                    <Counter end={1250} suffix="+" />
+                  </h1>
+                </div>
+                <div className={`${styles.stat} ${styles.stat2}`}>
+                  <p>
+                    <Paragraph text="Successful Deal Closure Rate" />
+                  </p>
+                  <h1>
+                    <Counter end={98} suffix="%" />
+                  </h1>
+                </div>
               </div>
             </div>
           </div>
