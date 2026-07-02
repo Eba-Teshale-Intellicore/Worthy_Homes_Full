@@ -10,10 +10,26 @@ import Button from "@/components/Button";
 import { MoveUpRight } from "lucide-react";
 
 const elements = [
-  { src: pic1, heading: "Ayat Real Estate", paragraph: "$120000 USD" },
-  { src: pic2, heading: "Ayat Real Estate", paragraph: "$120000 USD" },
-  { src: pic3, heading: "Ayat Real Estate", paragraph: "$120000 USD" },
-  { src: pic1, heading: "Ayat Real Estate", paragraph: "$120000 USD" },
+  {
+    src: pic1,
+    heading: "Family Living",
+    paragraph: "Designed for comfort, safety, ...",
+  },
+  {
+    src: pic2,
+    heading: "Real Estate & Economy",
+    paragraph: "Real estate plays a vital role ...",
+  },
+  {
+    src: pic3,
+    heading: "Economic Impact",
+    paragraph: "Every new housing project...",
+  },
+  {
+    src: pic1,
+    heading: "Sustainable Commu...",
+    paragraph: "We build more than homes—we... ",
+  },
 ];
 export default function AboutArticle() {
   return (
@@ -35,7 +51,9 @@ export default function AboutArticle() {
                     <Heading text={element.heading} size="sm" />
                     <div className={styles.cont}>
                       <Paragraph text={element.paragraph} size="sm" />
-                      <Button text="" icon={<MoveUpRight size={18} />} />
+                      {/* <div>
+                        <Button text="" icon={<MoveUpRight size={18} />} />
+                      </div> */}
                     </div>
                   </div>
                   <div className={styles.image}>
