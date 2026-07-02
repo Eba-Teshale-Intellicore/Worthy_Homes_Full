@@ -5,12 +5,14 @@ import Paragraph from "@/components/Paragraph";
 import Button from "@/components/Button";
 import { MoveUpRight } from "lucide-react";
 import Image from "next/image";
-import pic1 from "@/public/hero1.svg";
-
+import pic1 from "@/public/service1.svg";
+import pic2 from "@/public/service2.svg";
+import pic3 from "@/public/service3.svg";
+import pic4 from "@/public/service4.svg";
 export default function HeroServices() {
   const elements = [
     {
-      src: pic1,
+      src: pic2,
       heading: "Financial Consulting",
       paragraph:
         "We offer a comprehensive range of real estate services to help buyers, sellers, investors & tenants navigate the property market with ease.",
@@ -21,12 +23,12 @@ export default function HeroServices() {
       paragraph: "We offer a comprehensive range of market with ease.",
     },
     {
-      src: pic1,
+      src: pic3,
       heading: "Property law",
       paragraph: "We offer a comprehensive range of market with ease.",
     },
     {
-      src: pic1,
+      src: pic4,
       heading: "Property law",
       paragraph:
         "We offer a comprehensive range of real estate services to help buyers, sellers, investors & tenants navigate the property market with ease.",
