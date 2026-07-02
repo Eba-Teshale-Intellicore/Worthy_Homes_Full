@@ -74,7 +74,7 @@ export default function HeroPartners() {
                 className={styles.centerimage}
                 style={{ scale: scale4 }}
               >
-                <Image src={Pic1} alt="Luxury home" fill />
+                <Image src={img1} alt="Luxury home" fill />
               </motion.p>
             </div>
           </div>
