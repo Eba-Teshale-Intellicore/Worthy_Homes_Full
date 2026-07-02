@@ -5,6 +5,10 @@ import Heading from "@/components/Heading";
 import Button from "@/components/Button";
 import Image from "next/image";
 import Image1 from "@/public/hero1.svg";
+import img1 from "@/public/about1.svg";
+import img2 from "@/public/about2.svg";
+import img3 from "@/public/about3.svg";
+
 import { MoveUpRight } from "lucide-react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import Counter from "@/components/Counter";
@@ -26,9 +30,9 @@ export default function HeroAbout() {
 
   const pictures = [
     { src: Image1, scale: scale5 },
-    { src: Image1, scale: scale6 },
-    { src: Image1, scale: scale7 },
-    { src: Image1, scale: scale8 },
+    { src: img1, scale: scale6 },
+    { src: img2, scale: scale7 },
+    { src: img3, scale: scale8 },
   ];
 
   return (

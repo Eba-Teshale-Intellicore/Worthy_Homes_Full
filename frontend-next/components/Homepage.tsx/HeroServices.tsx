@@ -15,23 +15,25 @@ export default function HeroServices() {
       src: pic2,
       heading: "Financial Consulting",
       paragraph:
-        "We offer a comprehensive range of real estate services to help buyers, sellers, investors & tenants navigate the property market with ease.",
+        "Expert financial planning and mortgage guidance to help you invest in property with confidence.",
     },
     {
       src: pic1,
-      heading: "Property law",
-      paragraph: "We offer a comprehensive range of market with ease.",
+      heading: "Property Law",
+      paragraph:
+        "Legal support for contracts, ownership transfers, compliance, and secure real estate transactions.",
     },
     {
       src: pic3,
-      heading: "Property law",
-      paragraph: "We offer a comprehensive range of market with ease.",
+      heading: "Real Estate Consulting",
+      paragraph:
+        "Expert guidance to help you make confident real estate decisions.",
     },
     {
       src: pic4,
-      heading: "Property law",
+      heading: "Property Management",
       paragraph:
-        "We offer a comprehensive range of real estate services to help buyers, sellers, investors & tenants navigate the property market with ease.",
+        "Professional management services to maintain, lease, and maximize the value of your property.",
     },
   ];
   return (
