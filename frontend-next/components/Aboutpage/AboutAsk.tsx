@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import styles from "@/src/scss/aboutagent.module.scss";
+import styles from "@/src/scss/aboutask.module.scss";
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
 import Image from "next/image";
