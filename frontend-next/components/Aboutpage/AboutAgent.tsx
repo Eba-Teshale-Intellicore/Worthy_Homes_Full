@@ -6,6 +6,7 @@ import Paragraph from "@/components/Paragraph";
 import Image from "next/image";
 import Pic1 from "@/public/aboutask.svg";
 import { AnimatePresence, motion } from "framer-motion";
+import { Plus } from "lucide-react";
 
 const faqs = [
   {
