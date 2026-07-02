@@ -4,12 +4,12 @@ import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import img1 from "@/public/hero2.svg";
+import img1 from "@/public/phisonLogo.svg";
 import img2 from "@/public/NoahLogo.svg";
-import img3 from "@/public/RoamrkLogo.svg";
+import img3 from "@/public/hillbottomLogo.svg";
 import img4 from "@/public/TemerLogo.svg";
 import img5 from "@/public/ayatlogo.svg";
-import img6 from "@/public/hillbottomLogo.svg";
+import img6 from "@/public/RoamrkLogo.svg";
 import img7 from "@/public/phisonLogo.svg";
 import styles from "@/src/scss/heropartners.module.scss";
 
