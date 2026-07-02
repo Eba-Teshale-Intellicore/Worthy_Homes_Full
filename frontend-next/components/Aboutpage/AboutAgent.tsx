@@ -1,13 +1,37 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import styles from "@/src/scss/aboutagent.module.scss";
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
-import Button from "@/components/Button";
 import Image from "next/image";
 import Pic1 from "@/public/aboutask.svg";
-import { MoveUpRight } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+
+const faqs = [
+  {
+    question: "Frequently Asked Questions",
+    answer:
+      "The gap between what gets built and what's actually needed—for teachers, nurses, service workers, families—keeps widening across cities everywhere.",
+  },
+  {
+    question: "Why Worthy Homes?",
+    answer:
+      "Worthy Homes was founded to close that gap: a private development firm operating with speed, discipline, and accountability.",
+  },
+  {
+    question: "Frequently Asked Questions",
+    answer:
+      "The gap between what gets built and what's actually needed—for teachers, nurses, service workers, families—keeps widening across cities everywhere.",
+  },
+  {
+    question: "Frequently Asked Questions",
+    answer:
+      "The gap between what gets built and what's actually needed—for teachers, nurses, service workers, families—keeps widening across cities everywhere.",
+  },
+];
 
 export default function AboutAgent() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
   return (
     <>
       <div className={styles.container}>
@@ -17,21 +41,42 @@ export default function AboutAgent() {
               <Heading text="Frequently Asked Questions" />
               <div className={`${styles.thiblock} ${styles.block3}`}>
                 <div className={styles.secbox}>
-                  <div
-                    className={`${styles.textcontainer} ${styles.blocktext}`}
-                  >
-                    <div>
-                      <Heading text="Frequently Asked Questions" />
-                      <Paragraph
-                        text="   The gap between what gets built and what’s actually needed — for teachers, nurses, service workers, families — keeps widening across cities everywhere. Not for lack of commitment. But for lack of execution."
-                        size="sm"
-                      />{" "}
-                    </div>
-
-                    <Paragraph
-                      text="   Worthy Homes was founded to close that gap: a private development firm operating with the speed, discipline, and accountability to deliver affordable housing at the scale and quality residents deserve."
-                      size="sm"
-                    />
+                  <div className={styles.textcontainer}>
+                    {faqs.map((faq, index) => (
+                      <div key={index} className={styles.faq}>
+                        <div
+                          className={styles.question}
+                          onClick={() =>
+                            setOpenIndex(openIndex === index ? null : index)
+                          }
+                        >
+                          <Heading text={faq.question} size="sm" />
+                          <Plus
+                            size={24}
+                            style={{
+                              transform:
+                                openIndex === index
+                                  ? "rotate(45deg)"
+                                  : "rotate(0deg)",
+                              transition: "0.3s",
+                            }}
+                          />
+                        </div>
+                        <AnimatePresence>
+                          {openIndex === index && (
+                            <motion.div
+                              className={styles.answer}
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.3 }}
+                            >
+                              <Paragraph text={faq.answer} size="sm" />
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    ))}
                   </div>
                   <div
                     className={`${styles.imagecontainer} ${styles.blockimg}`}

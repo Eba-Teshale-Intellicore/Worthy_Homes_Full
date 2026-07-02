@@ -9,6 +9,7 @@
   position: relative;
   border-bottom: solid 1px;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 .aboutagent {
   align-items: center;
@@ -16,10 +17,6 @@
   background: linear-gradient(to top, white 10%, #d5ffca 90%);
   position: relative;
   min-height: 100vh;
-
-  p {
-    margin: 2rem 20rem 2rem 10rem;
-  }
 }
 
 .thiblock {
@@ -48,13 +45,24 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 2rem;
+      gap: 1rem;
       width: 50%;
       padding: 2rem 0;
-      // p {
-      //   border-bottom: solid 1px;
-      //   padding: 0rem 5rem 2rem 0.9rem;
-      // }
+      border: solid 1px;
+      height: 600px;
+      overflow-y: auto;
     }
   }
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq {
+  border: 1px solid #ddd;
+  padding: 0 2rem;
 }
