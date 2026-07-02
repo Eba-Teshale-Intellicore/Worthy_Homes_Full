@@ -2,15 +2,17 @@ import React from "react";
 import styles from "@/src/scss/aboutarticle.module.scss";
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
-import pic1 from "@/public/client1.svg";
+import pic1 from "@/public/article1.svg";
+import pic2 from "@/public/article2.svg";
+import pic3 from "@/public/article3.svg";
 import Image from "next/image";
 import Button from "@/components/Button";
 import { MoveUpRight } from "lucide-react";
 
 const elements = [
   { src: pic1, heading: "Ayat Real Estate", paragraph: "$120000 USD" },
-  { src: pic1, heading: "Ayat Real Estate", paragraph: "$120000 USD" },
-  { src: pic1, heading: "Ayat Real Estate", paragraph: "$120000 USD" },
+  { src: pic2, heading: "Ayat Real Estate", paragraph: "$120000 USD" },
+  { src: pic3, heading: "Ayat Real Estate", paragraph: "$120000 USD" },
   { src: pic1, heading: "Ayat Real Estate", paragraph: "$120000 USD" },
 ];
 export default function AboutArticle() {
